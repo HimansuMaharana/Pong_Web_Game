@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Pong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <h1>Neon Pong Game</h1>
+        <p>Use the paddle to hit the ball. Don't let it pass you!</p>
+        <button onclick="showDifficultyScreen()">Start Game</button>
+    </div>
+
+    <!-- Difficulty Selection Screen -->
+    <div id="difficulty-screen" style="display: none;">
+        <h2>Select Difficulty</h2>
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" style="display: none;">
+        <div id="score">Player: 0 | AI: 0</div>
+        <canvas id="pongCanvas"></canvas>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" style="display: none;">
+        <h2>Game Over</h2>
+        <button onclick="goToHome()">Go to Home Page</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
